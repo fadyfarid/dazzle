@@ -302,6 +302,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   height: 80vh; /* Adjust as needed */
+  padding: 0 10px;
 }
 
 .wrapper {
@@ -576,7 +577,7 @@ border-radius: 5px;
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 800px;
@@ -730,6 +731,11 @@ textarea {
 .footer p{
   color: #fefefe;
 }
+
+.menu-toggle {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .carousel img {
     width: calc(100% / 2);
@@ -739,5 +745,163 @@ textarea {
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel img {
+    width: calc((100% / 3) - 10px);
+  }
+  
+  .video-gallery {
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+  .video {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .gems_pic {
+    padding: 20px;
+  }
+
+  .product-item {
+    width: calc(50% - 20px);
+  }
+
+  .ourstory {
+    flex-direction: column;
+  }
+
+  .ours {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .who .con {
+    flex-direction: column;
+  }
+
+  .top-right-img {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .category {
+    width: calc(50% - 10px);
+  }
+
+  .carousel img {
+    width: calc(50% - 10px);
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .bord {
+    width: 80%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .bord h5 {
+    font-size: 1.2em;
+  }
+
+  .bord p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text h2 {
+    font-size: 16px;
+  }
+
+  .category {
+    width: 100%;
+  }
+
+  .carousel img {
+    width: 100%;
+  }
+
+  .prices img {
+    width: 100%;
+  }
+
+  .rounded-social-buttons .social-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Add hamburger menu for mobile */
+@media screen and (max-width: 992px) {
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+    margin-top: 0px;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
   }
 }

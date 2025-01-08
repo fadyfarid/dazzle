@@ -113,3 +113,16 @@ videos.forEach((video, index) => {
     playCurrentVideo();
   });
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navUl.classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('nav')) {
+    navUl.classList.remove('show');
+  }
+});
